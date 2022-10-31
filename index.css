@@ -115,320 +115,41 @@ cursor: pointer;
     width: 100%;
     height: 70%;
 }
-
-
-.l1,
-.l2,
-.l3,
-.l4,
-.l5,
-.l6,
-.l7{
-    position: relative;
-}
-
-.d1{
-    width: 220px;
-    height: 200px;
-    background-color: white;
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.534);
-    direction: rtl;
-    border-radius: 5px;
-    position: absolute;
-   top: 20px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-   display: none;
-   list-style: none;
-  font-size: 14px;
-  
-}
-.d1 a{
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-   
-}
-.d1 li :hover{
-background-color: rgb(231, 228, 228);
-color: rgb(37, 85, 140);
-}
-
-/* menu li */
- .bb {
-    width:100%;
-    display: flex;
+.sheet{
     list-style: none;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-
-  cursor: pointer;
-  margin-top: 13px;
- }
-
-
- .bb li:hover{
-color: blue;
-
- }
- .bb li:hover::after{
-    display: block;
- }
-
- .bb .l1::after,
- .bb .l2::after,
- .bb .l3::after,
- .bb .l4::after,
- .bb .l5::after,
- .bb .l6::after,
- .bb .l7::after
-  {
-    content: "";
-    
-    background-color: rgb(0, 0, 255);
-    width: 100%;
-    height: 1px;
-  transform: translate(0px,0px);
-   
-   
-    
-    }
-
-
-
- .d2{
-    width: 130px;
-    height: 200px;
     background-color: white;
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.534);
-    direction: rtl;
-    border-radius: 5px;
-    position: absolute;
-   top: 20px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-   display: none;
-   list-style: none;
-  font-size: 14px;
-  
-}
-.d2 a{
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-   
-}
-.d2 li :hover{
-background-color: rgb(231, 228, 228);
-color: rgb(37, 85, 140);
-}
-
-.d3{
-    width: 130px;
-    height: 200px;
-    background-color: white;
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.534);
-    direction: rtl;
-    border-radius: 5px;
-    position: absolute;
-   top: 20px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-   display: none;
-   list-style: none;
-  font-size: 14px;
-  
-}
-
-.d3 a{
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-   
-}
-.d3 li :hover{
-background-color: rgb(231, 228, 228);
-color: rgb(37, 85, 140);
-}
-
-
-
-.d4{
-    width: 130px;
-    height: 200px;
-    background-color: white;
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.534);
-    direction: rtl;
-    border-radius: 5px;
-    position: absolute;
-   top:20px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-   display: none;
-   list-style: none;
-  font-size: 14px;
-  
-}
-
-
-.d4 a{
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-   
-}
-.d4 li :hover{
-    background-color: rgb(231, 228, 228);
-    color: rgb(37, 85, 140);
-    }
-.d4 li{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    justify-content: space-between;
-}
-.d4  div{
-   width: 10px;
-   height: 20px;
-position: relative;
-
-}
-.d4 div::before{
-    content: "";
-    width: 10px;
-    height: 2px;
-    background-color: blue;
-   position: absolute;
-  left:0;
-  top: 5px;
-  transform: rotate(-45deg);
-}
-.d4 div::after{
-    content: "";
-    width: 10px;
-    height: 2px;
-    background-color: blue;
-   position: absolute;
-  left:0;
-  top: 11px;
-
-  transform: rotate(45deg);
-}
-.d4_5,
-.d4_4,
-.d4_3,
-.d4_2,
-.d4_1{
     width: 200px;
     height: 200px;
-    background-color: white;
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.534);
-    direction: rtl;
-    border-radius: 5px;
     position: absolute;
-   top: 20px;
-    right:0px;
+   right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-   list-style: none;
-   display: none;
-   font-size: 14px;
- z-index:2;
-
- 
-}
-.d4_5 li  :hover,
-.d4_4 li  :hover,
-.d4_3 li  :hover,
-.d4_2 li  :hover,
-.d4_1  li :hover{
-    background-color: rgb(231, 228, 228);
-    color: rgb(37, 85, 140);
-    }
-    .d4_5 li,
-    .d4_4 li,
-    .d4_3 li,
-    .d4_2 li,
-    .d4_1 li{
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        justify-content: left;
-        transform: translateY(10px);
-
-    }
-    .d4_5 div,
-    .d4_4 div,
-    .d4_3 div,
-.d4_2 div,
-    .d4_1  div{
- 
-        position: relative;
-        width: 15px;
-        height: 25px;
-       left: -10px;
-       top: -40%;
-        }
-        .d4_5 a,
-        .d4_4 a,
-        .d4_3 a,
-        .d4_2 a,
-        .d4_1 a{
-            text-decoration: none;
-            color: black;
-        }
-        .d4_5 div::before,
-        .d4_4 div::before,
-        .d4_3 div::before,
-        .d4_2 div::before,
-        .d4_1 div::before{
-            content: "";
-            width: 15px;
-            height: 3px;
-            background-color: blue;
-           position: absolute;
-          left:0;
-          top: 3px;
-          transform: rotate(-145deg);
-          
-        }
-        .d4_5 div::after,
-        .d4_4 div::after,
-        .d4_3 div::after,
-        .d4_2 div::after,
-        .d4_1 div::after{
-            content: "";
-            width: 15px;
-            height: 3px;
-            background-color: blue;
-           position: absolute;
-          left:0;
-          top: 11px;       
-          transform: rotate(145deg);
-        }
-
+    display: none;
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.222);
         
-.activ{
-    display: flex;
+      border-radius: 5px;
+    align-items: flex-end;
 }
-.activ1{
-    display: flex;
+.sheet a{
+    color: black;
+    text-decoration: none;
+
+ margin: 5px;
 }
-.add{
-    width: 500px;
-    height: 100px;
+.active{
+display: flex;
+}
+.menu li{
+    position: relative;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    flex-direction: row-reverse;
+cursor: pointer;
 }

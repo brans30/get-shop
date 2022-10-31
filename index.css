@@ -1,155 +1,160 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{
-    background-color: #f7f8f8;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
- 
-    
+header {
+  background-color: #f7f8f8;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-header input:nth-child(1){
-    height: 40px;
-width:300px ;
-border-radius:0 3px 3px 0;
-
+header input:nth-child(1) {
+  height: 40px;
+  width: 300px;
+  border-radius: 0 3px 3px 0;
 }
-header input{
-    height: 40px;
-width:250px ;
-border-radius:3px;
-
+header input {
+  height: 40px;
+  width: 250px;
+  border-radius: 3px;
 }
 
-.in{
-    display: flex;
-    flex-direction: row-reverse;
+.in {
+  display: flex;
+  flex-direction: row-reverse;
 }
-.in button{
-height: 40px;
-width: 40px;
-color: white ;
-background-color: black;
-font-size: x-large;
-border-radius: 3px 0 0 3px;
+.in button {
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: black;
+  font-size: x-large;
+  border-radius: 3px 0 0 3px;
 }
-header a{
-    text-decoration: none;
-    color: black;
-    font-size:medium;
-    font-weight: bold;
-}
-
-header p{
-    font-size:medium;
-    font-weight: bold;
-    z-index: 10;
-}
-.sell{
-   
-    width: 60px;
-    height: 35px;
-border-radius: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: beige;
-
-position: relative;
-
-
-}
-.sell img{
-    position: absolute;
-
-}
-.sell :nth-child(2){
-    font-size:x-large;
-    font-weight: bold;
-    margin-left: 5px;
-z-index: 10;
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+  font-weight: bold;
 }
 
+header p {
+  font-size: medium;
+  font-weight: bold;
+  z-index: 10;
+}
+.sell {
+  width: 60px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
 
-
-
-
+  position: relative;
+}
+.sell img {
+  position: absolute;
+}
+.sell :nth-child(2) {
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 5px;
+  z-index: 10;
+}
 
 /*##############################*/
-.nav-section-botom{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
- 
-   float: left;
+.nav-section-botom {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
 
-    box-shadow: 0 1px 10px  0;
+  float: left;
 
-   
+  box-shadow: 0 1px 10px 0;
 }
-.cont{
-    margin: 50px 0 0 5% ;
-   
-    width: 90%;
-  ;
-    display: flex;
-justify-content: space-around;
-gap: 5px;
-flex-wrap: wrap;
+.cont {
+  margin: 50px 0 0 5%;
 
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  flex-wrap: wrap;
 }
-.cont div{
-    margin-top: 20px ;
-    width: 300px;
-    height: 300px;
-    background-color: rgb(106, 88, 66);
-cursor: pointer;
+.cont div {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(106, 88, 66);
+  cursor: pointer;
 }
-.cont div img{
-    width: 100%;
-    height: 70%;
+.cont div img {
+  width: 100%;
+  height: 70%;
 }
-.sheet{
-    list-style: none;
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-   right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    display: none;
-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.222);
-        
-      border-radius: 5px;
-    align-items: flex-end;
-}
-.sheet a{
-    color: black;
-    text-decoration: none;
 
- margin: 5px;
+/* ##################################################################### */
+.sheet {
+  list-style: none;
+  background-color: white;
+  width: 200px;
+  /* عشان لو في عناصر بتزيد تاخد راحتها  */ /* جرب تخليها "height" زي ما كونت عامل */
+
+  min-height: 200px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.222);
+  border-radius: 5px;
+  align-items: flex-end;
+  font-size: 13px;
 }
-.active{
-display: flex;
+.sheet a {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
 }
-.menu li{
-    position: relative;
+
+.sheet a:hover {
+  color: blue;
 }
-.menu{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    align-items: center;
-    flex-direction: row-reverse;
-cursor: pointer;
+
+.sheet li {
+  padding: 7px 3px;
+}
+
+/* .active {
+  display: flex;
+} */
+/* هنحط دي بدالها */
+li.expand:hover ul {
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu > li:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  flex-direction: row-reverse;
+  cursor: pointer;
 }

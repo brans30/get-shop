@@ -1,17 +1,17 @@
 //api
 
 async function fetchData() {
-  let cont = document.querySelector('.cont')
+  let cont = document.querySelector('.cont');
 
   // جرب دي الصح
   fetch('https://fakestoreapi.com/products')
     .then((data) => data.json())
     .then((products) => {
       products.forEach((pro) => {
-        let div = document.createElement('div')
-        let img = document.createElement('img')
-        let p = document.createElement('p')
-        let p1 = document.createElement('p')
+        let div = document.createElement('div');
+        let img = document.createElement('img');
+        let p = document.createElement('p');
+        let p1 = document.createElement('p');
         p.textContent = pro.title
         p1.textContent = 'price:' + pro.price
         img.src = pro.image
@@ -19,9 +19,9 @@ async function fetchData() {
         div.append(p)
         div.append(p1)
         cont.append(div)
-      })
-    })
-
+      });
+    });
+  };
   // ارمي دي في الزبالة
   //   let data = await fetch('https://fakestoreapi.com/products')
   //   let data1 = await data.json()
@@ -40,12 +40,14 @@ async function fetchData() {
   //     div.append(p1)
   //     cont.append(div)
   //   }
-}
+
+
+
 
 // هنا بتقوله لما الموقع يحمل ابدأ الفنكشن
 window.addEventListener('load', () => {
-  fetchData()
-})
+  fetchData();
+});
 
 // ارمي في الزبالة
 // let navbottom = document.querySelector('.nav-section-botom')
@@ -64,3 +66,12 @@ window.addEventListener('load', () => {
 //     }
 //   }
 // })
+
+let sheet = document.querySelectorAll(".sheet li div");
+
+
+
+console.log(sheet);
+sheet.onclick = function(){
+  console.log("gtt");
+};

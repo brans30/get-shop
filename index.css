@@ -122,6 +122,8 @@ header p {
   color: black;
   text-decoration: none;
   margin: 5px;
+  float: right;
+  cursor: pointer;
 }
 
 .sheet a:hover {
@@ -130,13 +132,16 @@ header p {
 
 .sheet li {
   padding: 7px 3px;
+  width: 100%;
+ 
+
 }
 
 /* .active {
   display: flex;
 } */
 /* هنحط دي بدالها */
-li.expand:hover ul {
+li.expand:hover ul:first-child {
   display: flex;
 }
 
@@ -147,6 +152,8 @@ li.expand:hover ul {
 .menu > li:hover {
   color: blue;
   text-decoration: underline;
+  cursor: pointer;
+
 }
 .menu {
   width: 100%;
@@ -157,4 +164,33 @@ li.expand:hover ul {
   align-items: center;
   flex-direction: row-reverse;
   cursor: pointer;
+}
+.sheet div{
+position: relative;
+float:left;
+margin:10px 0 0 20px;
+cursor: pointer;
+width:20px;
+height: 10px;
+z-index: 10;
+}
+
+
+.sheet div::after{
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  top:6px;
+  transform: rotate(45deg);
+}
+.sheet div::before{
+  content:"";
+  width: 10px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+ 
+  transform: rotate(-45deg);
 }

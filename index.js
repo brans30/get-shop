@@ -67,11 +67,30 @@ window.addEventListener('load', () => {
 //   }
 // })
 
-let sheet = document.querySelectorAll(".sheet li div");
+let sheetli = document.querySelectorAll(".m1");
+let sheet =document.querySelectorAll(".sheet1")
+let div =document.querySelectorAll(".sheet1 div")
+console.log(div)
+sheetli.forEach(function(ele, index){
 
 
+  ele.onclick =function (){
+    sheetli.forEach(function(ele){
 
-console.log(sheet);
-sheet.onclick = function(){
-  console.log("gtt");
-};
+    })
+  sheet[index].style.display= "flex";
+}
+})
+
+
+div.forEach(function(ele,index){
+  ele.onclick = function(){
+    sheet[index].style.display="none";
+  }
+
+})
+sheet.forEach(function(ele,index){
+ele.onmouseleave=function(){
+  sheet[index].style.display="none";
+}
+})

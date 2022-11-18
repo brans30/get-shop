@@ -1,96 +1,161 @@
 //api
 
 async function fetchData() {
-  let cont = document.querySelector('.cont');
+  let cont = document.querySelector(".cont");
 
   // جرب دي الصح
-  fetch('https://fakestoreapi.com/products')
+  fetch("https://fakestoreapi.com/products")
     .then((data) => data.json())
     .then((products) => {
       products.forEach((pro) => {
-        let div = document.createElement('div');
-        let img = document.createElement('img');
-        let p = document.createElement('p');
-        let p1 = document.createElement('p');
-        p.textContent = pro.title
-        p1.textContent = 'price:' + pro.price
-        img.src = pro.image
-        div.append(img)
-        div.append(p)
-        div.append(p1)
-        cont.append(div)
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        let p = document.createElement("p");
+        let p1 = document.createElement("p");
+        p.textContent = pro.title;
+        p1.textContent = "price:" + pro.price;
+        img.src = pro.image;
+        div.append(img);
+        div.append(p);
+        div.append(p1);
+        cont.append(div);
       });
     });
-  };
-  // ارمي دي في الزبالة
-  //   let data = await fetch('https://fakestoreapi.com/products')
-  //   let data1 = await data.json()
-  //   console.log(data1)
-  //   for (let i = 0; i <= data1.length; i++) {
-  //     let div = document.createElement('div')
-  //     let img = document.createElement('img')
-  //     img.setAttribute('src', data1[i].image)
-  //     let p = document.createElement('p')
-  //     let p1 = document.createElement('p')
-  //     p.textContent = data1[i].title
-  //     p1.textContent = 'price:' + data1[i].price
+}
 
-  //     div.append(img)
-  //     div.append(p)
-  //     div.append(p1)
-  //     cont.append(div)
-  //   }
-
-
-
-
-// هنا بتقوله لما الموقع يحمل ابدأ الفنكشن
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   fetchData();
 });
 
-// ارمي في الزبالة
-// let navbottom = document.querySelector('.nav-section-botom')
-// let ul = document.querySelectorAll('.menu ul ')
-// let menu = document.querySelectorAll('.menu li')
-// let sheet = document.querySelector('.sheet')
-
-// menu.forEach(function (ele) {
-//   ele.onmouseover = function () {
-//     ul.forEach(function (ele) {
-//       ele.classList.remove('active')
-//     })
-
-//     if (this.children[0].classList.contains('sheet') === true) {
-//       this.children[0].classList.add('active')
-//     }
-//   }
-// })
 
 let sheetli = document.querySelectorAll(".m1");
-let sheet =document.querySelectorAll(".sheet1")
-let div =document.querySelectorAll(".sheet1 div")
-console.log(div)
-sheetli.forEach(function(ele, index){
+let sheet = document.querySelectorAll(".sheet1");
+let div = document.querySelectorAll(".sheet1 div");
+let mmm = document.querySelectorAll(".section-right");
+let map = document.querySelector(".map img");
+let mapdawn=document.querySelector(".map-dawn");
+
+sheetli.forEach(function (ele, index) {
+  ele.onclick = function () {
+    sheetli.forEach(function (ele) {});
+    sheet[index].style.display = "flex";
+  };
+});
+
+div.forEach(function (ele, index) {
+  ele.onclick = function () {
+    sheet[index].style.display = "none";
+  };
+});
+sheet.forEach(function (ele, index) {
+  ele.onmouseleave = function () {
+    sheet[index].style.display = "none";
+  };
+});
+
+let aftr = document.querySelectorAll(".aftr");
+let sectionleft =document.querySelectorAll(".section-left")
 
 
-  ele.onclick =function (){
-    sheetli.forEach(function(ele){
+mmm.forEach(function (ele,index) {
 
-    })
-  sheet[index].style.display= "flex";
-}
+ 
+  ele.onclick = function () {
+sectionleft.forEach(function(ele){
+ele.style.display="none";
+
 })
+sectionleft[index].style.display= "flex";
 
 
-div.forEach(function(ele,index){
-  ele.onclick = function(){
-    sheet[index].style.display="none";
+    mmm.forEach(function (ele) {
+      ele.classList.remove("active");
+
+      aftr.forEach(function (gg) {
+        gg.style.display = "none";
+      });
+
+    });
+
+    this.classList.add("active");
+    this.lastElementChild.style.display = "block";
+  };
+});
+
+map.onclick=function(){
+  mapdawn.classList.toggle("map-dawn-active")
+  map.classList.toggle("img2")
+}
+
+
+
+let add =document.querySelectorAll(".add img")
+let button = document.querySelector(".boto");
+let dd = document.querySelector(".add")
+
+
+
+
+
+
+let namp = 0;
+  setInterval(function(){
+
+
+     
+    
+   
+slider()
+namp++
+
+
+},6000);
+
+
+function slider(){
+  if(namp===add.length){
+  
+    namp=0;
   }
+  if(add[add.length-3].classList.contains("imgadd0")){
+    add[add.length-1].classList.add("img123")
+    add[add.length-1].classList.remove("imgadd0","imgadd1")
+  }
+  
+  if(namp===add.length-1){
+   
+    add[add.length-1].classList.add("imgadd1")
+    add[add.length-1].classList.remove("imgadd0")
+    add[add.length-2].classList.add("img123")
+    add[0].classList.add("imgadd0")
+   add[add.length-2].classList.remove("imgadd0","imgadd1")
 
-})
-sheet.forEach(function(ele,index){
-ele.onmouseleave=function(){
-  sheet[index].style.display="none";
+  }
+ 
+if(add[namp].classList.contains("imgadd0")===true ){
+    
+  add[namp].classList.add("imgadd1")
+    add[namp].nextElementSibling.classList.add("imgadd0")
 }
-})
+
+
+
+add[namp].classList.remove("imgadd0")
+
+if(add[namp+1]!==undefined){
+
+if(add[namp+1].classList.contains("imgadd0")===true&& add[namp-1]!==undefined){
+ 
+
+  add[namp-1].classList.add("img123")
+
+  add[namp-1].classList.remove("imgadd0","imgadd1")
+}
+    }
+   
+
+}
+
+
+
+

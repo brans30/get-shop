@@ -4,9 +4,13 @@ async function fetchData() {
   let cont = document.querySelector(".cont");
 
   // جرب دي الصح
-  fetch("https://fakestoreapi.com/products")
-    .then((data) => data.json())
-    .then((products) => {
+//fetch("https://fakestoreapi.com/products")
+fetch("https://dummyjson.com/products?limit=100")
+
+ .then((data) => data.json())
+
+    .then(({products}) => {
+      console.log(products)
       products.forEach((pro) => {
         let div = document.createElement("div");
         let img = document.createElement("img");
@@ -14,11 +18,12 @@ async function fetchData() {
         let p1 = document.createElement("p");
         p.textContent = pro.title;
         p1.textContent = "price:" + pro.price;
-        img.src = pro.image;
+        img.src = pro.images[0];
         div.append(img);
         div.append(p);
         div.append(p1);
         cont.append(div);
+        
       });
     });
 }
@@ -156,6 +161,28 @@ if(add[namp+1].classList.contains("imgadd0")===true&& add[namp-1]!==undefined){
 
 }
 
+
+
+
+//##################login#########
+
+
+let contLogin=document.querySelector(".contenr-login")
+let login=document.querySelector(".login")
+let login0=document.querySelector(".login0")
+let ext=document.querySelector(".ext")
+login0.onclick = function(){
+  contLogin.style.display = "block"
+login.style.display =  "flex"
+}
+ext.onclick = function(){
+  contLogin.style.display = "none"
+login.style.display =  "none"
+}
+contLogin.onclick = function(){
+  contLogin.style.display = "none"
+login.style.display =  "none"
+}
 
 
 
